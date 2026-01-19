@@ -1,0 +1,31 @@
+ int av=(f+size)% arr.length;
+            arr[av]=data;
+            size++;
+        }
+    }
+
+    @Override
+    public E dequeue() {
+        if (isEmpty())return null;
+        E delete=arr[f];
+        arr[f]=null;
+        f=f+1;
+        size--;
+        return delete;
+    }
+
+    @Override
+    public E front() {
+        return arr[f];
+    }
+    public void display(){
+       for(int i=0; i< size; i++){
+           int index=(f+i)% arr.length;
+           System.out.print(arr[index]+" ");
+
+        }
+
+
+
+    }
+}
